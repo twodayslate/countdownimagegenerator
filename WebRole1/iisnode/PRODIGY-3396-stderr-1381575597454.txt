@@ -1,0 +1,11 @@
+ReferenceError: next is not defined
+    at gm.streamOut (C:\node\expressapp\WebRole1\server.js:60:32)
+    at cb (C:\node\expressapp\node_modules\gm\lib\command.js:264:16)
+    at gm._spawn (C:\node\expressapp\node_modules\gm\lib\command.js:252:7)
+    at C:\node\expressapp\node_modules\gm\lib\command.js:117:19
+    at series (C:\node\expressapp\node_modules\gm\node_modules\array-series\index.js:11:36)
+    at gm._preprocess (C:\node\expressapp\node_modules\gm\lib\command.js:154:5)
+    at gm.stream (C:\node\expressapp\node_modules\gm\lib\command.js:115:10)
+    at C:\node\expressapp\WebRole1\server.js:53:10
+    at callbacks (C:\node\expressapp\WebRole1\node_modules\express\lib\router\index.js:164:37)
+    at C:\node\expressapp\node_modules\express-form\lib\form.js:103:15

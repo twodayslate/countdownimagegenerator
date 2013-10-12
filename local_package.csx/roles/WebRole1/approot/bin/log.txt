@@ -1,0 +1,110 @@
+
+C:\node\expressapp\local_package.csx\roles\WebRole1\approot\bin>cd /d "C:\node\expressapp\local_package.csx\roles\WebRole1\approot\bin\" 
+
+C:\node\expressapp\local_package.csx\roles\WebRole1\approot\bin>if "true" == "true" if DEFINED APPCMD goto emulator_setup 
+
+C:\node\expressapp\local_package.csx\roles\WebRole1\approot\bin>echo Running in emulator adding iisnode to application host config 
+Running in emulator adding iisnode to application host config
+
+C:\node\expressapp\local_package.csx\roles\WebRole1\approot\bin>FOR /F "tokens=1,2 delims=/" %a in (""C:\Program Files\IIS Express\appcmd.exe" /apphostconfig:"C:\Users\Zac\AppData\Local\dftmp\Resources\41a089d8-fd17-4f4a-b348-f1f8acd6bcaf\temp\temp\RoleTemp\applicationHost.config" ") DO set FN=%a  & set OPN=%b 
+
+C:\node\expressapp\local_package.csx\roles\WebRole1\approot\bin>set FN="C:\Program Files\IIS Express\appcmd.exe"   & set OPN=apphostconfig:"C:\Users\Zac\AppData\Local\dftmp\Resources\41a089d8-fd17-4f4a-b348-f1f8acd6bcaf\temp\temp\RoleTemp\applicationHost.config"  
+
+C:\node\expressapp\local_package.csx\roles\WebRole1\approot\bin>if "apphostconfig:"C:\Users\Zac\AppData\Local\dftmp\Resources\41a089d8-fd17-4f4a-b348-f1f8acd6bcaf\temp\temp\RoleTemp\applicationHost.config" " == ""C:\Users\Zac\AppData\Local\dftmp\Resources\41a089d8-fd17-4f4a-b348-f1f8acd6bcaf\temp\temp\RoleTemp\applicationHost.config" " (
+echo "Could not parse appcmd '"C:\Program Files\IIS Express\appcmd.exe" /apphostconfig:"C:\Users\Zac\AppData\Local\dftmp\Resources\41a089d8-fd17-4f4a-b348-f1f8acd6bcaf\temp\temp\RoleTemp\applicationHost.config"  for configuration file, exiting"  
+ goto error 
+) 
+
+C:\node\expressapp\local_package.csx\roles\WebRole1\approot\bin>set IISNODE_BINARY_DIRECTORY=C:\Program Files (x86)\iisnode-dev\release\x64 
+
+C:\node\expressapp\local_package.csx\roles\WebRole1\approot\bin>set IISNODE_SCHEMA=C:\Program Files (x86)\iisnode-dev\release\x64\iisnode_schema.xml 
+
+C:\node\expressapp\local_package.csx\roles\WebRole1\approot\bin>if "AMD64" == "AMD64" goto start 
+
+C:\node\expressapp\local_package.csx\roles\WebRole1\approot\bin>set
+ALLUSERSPROFILE=C:\ProgramData
+APPCMD="C:\Program Files\IIS Express\appcmd.exe" /apphostconfig:"C:\Users\Zac\AppData\Local\dftmp\Resources\41a089d8-fd17-4f4a-b348-f1f8acd6bcaf\temp\temp\RoleTemp\applicationHost.config" 
+APPDATA=C:\Users\Zac\AppData\Roaming
+AZURE_DRIVE_DEV_PATH=C:\Users\Zac\AppData\Local\dftmp\wadd
+CommonProgramFiles=C:\Program Files\Common Files
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+CommonProgramW6432=C:\Program Files\Common Files
+COMPUTERNAME=PRODIGY
+ComSpec=C:\Windows\system32\cmd.exe
+DiagnosticStore=C:\Users\Zac\AppData\Local\dftmp\Resources\41a089d8-fd17-4f4a-b348-f1f8acd6bcaf\directory\DiagnosticStore\
+EMULATED=true
+FN="C:\Program Files\IIS Express\appcmd.exe" 
+FP_NO_HOST_CHECK=NO
+GTK_BASEPATH=C:\GTK
+HOMEDRIVE=C:
+HOMEPATH=\Users\Zac
+IISNODE_BINARY_DIRECTORY=C:\Program Files (x86)\iisnode-dev\release\x64
+IISNODE_SCHEMA=C:\Program Files (x86)\iisnode-dev\release\x64\iisnode_schema.xml
+LOCALAPPDATA=C:\Users\Zac\AppData\Local
+LOGONSERVER=\\PRODIGY
+MONITORING_SESSION_NAME=devFabric.mainSession
+NUMBER_OF_PROCESSORS=4
+OPN=apphostconfig:"C:\Users\Zac\AppData\Local\dftmp\Resources\41a089d8-fd17-4f4a-b348-f1f8acd6bcaf\temp\temp\RoleTemp\applicationHost.config" 
+OS=Windows_NT
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+PROCESSOR_ARCHITECTURE=AMD64
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+PROCESSOR_LEVEL=6
+PROCESSOR_REVISION=3a09
+ProgramData=C:\ProgramData
+ProgramFiles=C:\Program Files
+ProgramFiles(x86)=C:\Program Files (x86)
+ProgramW6432=C:\Program Files
+PROMPT=$P$G
+PSModulePath=C:\Windows\system32\WindowsPowerShell\v1.0\Modules\;C:\Program Files (x86)\Microsoft SDKs\Windows Azure\PowerShell\
+PUBLIC=C:\Users\Public
+RoleDeploymentID=deployment20(14)
+RoleInstanceID=deployment20(14).expressapp.WebRole1_IN_0
+RoleName=WebRole1
+RUNTIMEID=node;iisnode
+RUNTIMEURL=http://az413943.vo.msecnd.net/node/0.6.20.exe;http://az413943.vo.msecnd.net/iisnode/0.1.21.exe
+SystemDrive=C:
+SystemRoot=C:\Windows
+USERDOMAIN=PRODIGY
+USERDOMAIN_ROAMINGPROFILE=PRODIGY
+USERNAME=Zac
+USERPROFILE=C:\Users\Zac
+windir=C:\Windows
+_CSRUN_IISEXPRESS_VERSION=8.0
+_DF_STATE_DIRECTORY=C:\Users\Zac\AppData\Local\dftmp\
+__IISCONFIGURATOR_SITE_CLEANUP_PREFIX_=deployment20(
+RdRoleRoot=C:\node\expressapp\local_package.csx\roles\WebRole1
+RoleRoot=C:\node\expressapp\local_package.csx\roles\WebRole1
+RdRoleId=deployment20(14).expressapp.WebRole1_IN_0
+TEMP=C:\Users\Zac\AppData\Local\dftmp\Resources\41a089d8-fd17-4f4a-b348-f1f8acd6bcaf\temp\temp\RoleTemp
+TMP=C:\Users\Zac\AppData\Local\dftmp\Resources\41a089d8-fd17-4f4a-b348-f1f8acd6bcaf\temp\temp\RoleTemp
+PATH=C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Users\Zac\AppData\Roaming\npm;C:\Program Files (x86)\nodejs\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\GTK\bin; \Python27;C:\Program Files\Microsoft SDKs\Windows Azure\Emulator\devfabric\;C:\Program Files\Microsoft SDKs\Windows Azure\Emulator\devfabric\x86\;C:\Program Files\Microsoft SDKs\Windows Azure\Emulator\devfabric\x64\;C:\node\expressapp\local_package.csx\roles\WebRole1\base\x64;C:\node\expressapp\local_package.csx\roles\WebRole1\base\x86;C:\node\expressapp\local_package.csx\roles\WebRole1\diagnostics\x64;
+RdServerNamePipe=\\.\pipe\RdRuntimeServer
+RdNamedPipeTimeoutInSeconds=30
+__WaRuntimeAgent__=WA-Runtime-d81b3d2e535d0d5f06f059f2e868c38b
+
+C:\node\expressapp\local_package.csx\roles\WebRole1\approot\bin>echo Using iisnode binaries location 'C:\Program Files (x86)\iisnode-dev\release\x64' 
+Using iisnode binaries location 'C:\Program Files (x86)\iisnode-dev\release\x64'
+
+C:\node\expressapp\local_package.csx\roles\WebRole1\approot\bin>echo installing iisnode module using AppCMD alias "C:\Program Files\IIS Express\appcmd.exe" /apphostconfig:"C:\Users\Zac\AppData\Local\dftmp\Resources\41a089d8-fd17-4f4a-b348-f1f8acd6bcaf\temp\temp\RoleTemp\applicationHost.config"  
+installing iisnode module using AppCMD alias "C:\Program Files\IIS Express\appcmd.exe" /apphostconfig:"C:\Users\Zac\AppData\Local\dftmp\Resources\41a089d8-fd17-4f4a-b348-f1f8acd6bcaf\temp\temp\RoleTemp\applicationHost.config" 
+
+C:\node\expressapp\local_package.csx\roles\WebRole1\approot\bin>"C:\Program Files\IIS Express\appcmd.exe" /apphostconfig:"C:\Users\Zac\AppData\Local\dftmp\Resources\41a089d8-fd17-4f4a-b348-f1f8acd6bcaf\temp\temp\RoleTemp\applicationHost.config"  install module /name:"iisnode" /image:"C:\Program Files (x86)\iisnode-dev\release\x64\iisnode.dll" 
+GLOBAL MODULE object "iisnode" added
+MODULE object "iisnode" added
+
+C:\node\expressapp\local_package.csx\roles\WebRole1\approot\bin>set apphostconfigfile="C:\Users\Zac\AppData\Local\dftmp\Resources\41a089d8-fd17-4f4a-b348-f1f8acd6bcaf\temp\temp\RoleTemp\applicationHost.config"  
+
+C:\node\expressapp\local_package.csx\roles\WebRole1\approot\bin>powershell -c "set-executionpolicy unrestricted" 
+
+C:\node\expressapp\local_package.csx\roles\WebRole1\approot\bin>powershell .\ChangeConfig.ps1 "C:\Users\Zac\AppData\Local\dftmp\Resources\41a089d8-fd17-4f4a-b348-f1f8acd6bcaf\temp\temp\RoleTemp\applicationHost.config"  
+Adding iisnode section to config file 'C:\Users\Zac\AppData\Local\dftmp\Resources\41a089d8-fd17-4f4a-b348-f1f8acd6bcaf\temp\temp\RoleTemp\applicationHost.config'
+
+C:\node\expressapp\local_package.csx\roles\WebRole1\approot\bin>if 0 NEQ 0 goto error 
+
+C:\node\expressapp\local_package.csx\roles\WebRole1\approot\bin>copy /y "C:\Program Files (x86)\iisnode-dev\release\x64\iisnode_schema.xml" "C:\Program Files\IIS Express\config\schema\iisnode_schema.xml" 
+        1 file(s) copied.
+
+C:\node\expressapp\local_package.csx\roles\WebRole1\approot\bin>if 0 NEQ 0 goto error 
+
+C:\node\expressapp\local_package.csx\roles\WebRole1\approot\bin>exit /b 0 
