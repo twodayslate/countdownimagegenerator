@@ -3,7 +3,7 @@ var http = require('http');
 var countdown = countdown = require('./routes/countdown');
 var app = express();
 
-var canvas = require('canvas-win');
+//var canvas = require('canvas-win');
 
 var	express_form = require("express-form"), 
 	filter = express_form.filter,
@@ -39,7 +39,7 @@ app.get('/', function(req,res) {
 
 app.get('/gen', express_form (
 		filter("name").trim(),
-		validate("name").required().is(/^[a-z]+$/),
+		//validate("name").required().is(/^[a-z]+$/),
 		filter("date").trim(),
 		filter("time").trim()
 	), function(req,res) {
@@ -47,22 +47,29 @@ app.get('/gen', express_form (
 		res.send(req.form.errors);
 	}
 	else { 
-		res.setHeader('Content-Type', 'image/png');
+		//res.setHeader('Content-Type', 'image/png');
 		//res.set('Content-Type', 'image/png');
-
-		var canvas = new Canvas(200,200);
-		var ctx = canvas.getContext('2d');
-		ctx.font = '30px Impact';
-		ctx.rotate(.1);
-		ctx.fillText("Awesome!", 50, 100);
-
-		var te = ctx.measureText('Awesome!');
-		ctx.strokeStyle = 'rgba(0,0,0,0.5)';
-		ctx.beginPath();
-		ctx.lineTo(50, 102);
-		ctx.lineTo(50 + te.width, 102);
-		ctx.stroke();
-		canvas.pngStream();
+		res.render('image', {
+			name:req.form.name,
+			days: 22,
+			hours: 11,
+			minutes: 1
+		});
+		//res.send('<canvas id="myCanvas" width="200" height="100"></canvas>')
+		// var canvas = document.getElementById("myCanvas");
+// 		var ctx = canvas.getContext('2d');
+// 		ctx.font = '30px Impact';
+// 		ctx.fillText("Awesome!", 50, 100);
+// 		
+// 		var te = ctx.measureText('Awesome!');
+// 		ctx.strokeStyle = 'rgba(0,0,0,0.5)';
+// 		ctx.beginPath();
+// 		ctx.lineTo(50, 102);
+// 		ctx.lineTo(50 + te.width, 102);
+// 		ctx.stroke();
+// 		var strDataURI = canvas.toDataURL("image/png");
+// 		document.write('<img src="'+strDataURI+'"/>');
+// 		canvas.pngStream();
 		// creating an image
 	}
 });

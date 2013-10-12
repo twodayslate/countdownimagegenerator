@@ -1,0 +1,17 @@
+doctype 5
+html(lang="en")
+	head
+		title= name
+	body
+		canvas(id="myCanvas" width="300" height="200")
+		| <script type='text/javascript'>
+		| var canvas = document.getElementById("myCanvas");
+		| var ctx = canvas.getContext('2d');
+		| ctx.font = '12px Arial';
+		| ctx.fillText("
+		= name + ': ' + days + ' days ' + hours + ' hours ' + minutes + ' minutes ' 
+		| ", 10, 10);
+		| var strDataURI = canvas.toDataURL("image/png");
+		| document.write('<img src="'+strDataURI+'"/>');
+		| document.getElementById("myCanvas").remove()
+		| </script>
